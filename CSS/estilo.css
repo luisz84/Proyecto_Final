@@ -3,40 +3,40 @@
     padding: 0;
 }
 body{
-     
+     /* width: auto; */
     background-image: url("/MEDIA/IMAGENES/background/background2.jpg");
     background-position:center;
     background-repeat:unset;
-    margin-left: 20px;
+    margin-left: 50px;
 }
 img{
     border-radius: 10%;
 }
-.grid{
+/* .grid{
     display: grid;
     grid-template-columns: 1fr; 
     grid-template-rows: 1fr 2fr 1fr;
-}
+} */
 
 
 
-.grid #menu a{
+/* .grid #menu a{
     grid-column: 2/2;
     grid-row: 1/1;
-}   
+}    */
 
 
 .encabezado{
-    width: 100%;
+    width: auto;
     height: 100px;
     display: flex;
   flex-wrap: nowrap;
     /* background-color: aqua; */
 }
 #logo{
-    width:35%;
-    height: 200px;
-    margin-top: 10px;
+    /* width:35%;
+    height: 200px;*/
+    margin-top: 10px; 
     /* width: 100px; */
    
     /* background-color: black; */
@@ -44,12 +44,13 @@ img{
    
 }
 #menu{
-    width: 70%;
-    height: 100px;
+    /* width: 70%; */
+    /* height: 100px; */
     
     /* background-color: blue;  */
     /* float: left; */
      list-style-type: none;
+     margin-top: 40px;
     
 
      
@@ -57,11 +58,13 @@ img{
 }
 #menu a{
     width:120px;
-    height: 20px;
+    height: 50px;
     font-size:20px;
     text-decoration:none;
     text-align:center;
     transition: height 2s;
+    padding-top: 10px;
+    
     /* color:rgb(9, 70, 101); */
 
     padding:5px 0px 0px 0px;
@@ -72,7 +75,7 @@ img{
 #menu li{
     float: left;
     list-style-type: none;
-    margin-top: 60px;
+    margin-top: 10px;
 
 }
 #menu ul{
@@ -81,27 +84,41 @@ img{
 
 main{
     display: flex;
-    flex-wrap: nowrap;
-    grid-column: 1/1 ;
+    margin:200px 0px 100px 200px;
+    /* flex-wrap: nowrap;
+    grid-column: 1/1 ; */
 }
 .description{
+    width: 350px;
+    height: 200px;
+    padding: 10px;
+    text-align: justify;
+    /* margin: 50px; */
+    margin: 130px 0px 0px 50px;
+    font-size: 18px;
+    overflow: hidden;
+}
+
+div .imagen{
+    margin-top: 50px;
+}
+
+.description__imagen    {
     width: 350px;
     height: 300px;
     padding: 10px;
     text-align: justify;
-    margin: 50px;
-    margin-top: 80px;
+    margin: 60px;
+    margin-top: 100px;
     font-size: 18px;
-    overflow: scroll;
-    
-
+    overflow: hidden;
 }
-.imagen{
-    width: 600px;
-    height: 400px;
+.imagen > img{
+    width: 400px;
+    height: 300px;
     /* float: left; */
     /* padding: 50px; */
-    margin-top: 40px;
+    margin-top: 70px;
     opacity: 0.8;
     background-color: #fff;
     border-radius: 30%;
@@ -147,47 +164,55 @@ nav ul li a{
 
 /* banner */
 .banner{
-    width:300px;
+    width:auto;
     height:100px;
-    margin-left: 100px;
+    margin-left: 200px;
     margin-top: 50px;
-   position: sticky;
-   grid-column: 1/1;
+   /* position: sticky; */
+   /* grid-column: 1/1; */
 
 
 }
 /* footer */
 footer{
-    width: 1000px;
+    width: 100%;
     height: 300px;
-    text-align: center;
+    align-items: center;
     float: left;
-    margin: 20px 0px 0px 40px;
-    grid-column: 1/1;
+    margin: auto;
+    text-align: center;
+    align-content: center;
+    margin-top: 50px;
+    
 
 }
 footer  a{
-    width: 100px;
-    height: 100px;
-    display: block;
-    text-align: center;
-    margin: 0px;
+    /* width: 40px;
+    height: 50px; */
+    display: inline-block;
+    align-content: center;
+    margin: 0px 0px 0px 0px;
+
    
 }
 footer li{
+    width: 100px;
     list-style-type: none;
     float: left;
 }
 footer h2{
-    margin: 100px 0 100px 0;
+    margin: 100px 0 50px 0px;
+    text-align: center;
     
 }
 .redes-sociales{
-    margin-left: 100px;
+    margin-left: auto;
+    /* align-items: center; */
     /* background-color: white; */
 }
 footer ul{
-   margin-left: 200px;
+   margin-left: 400px;
+    align-content:center ;
   
 }
 /* formulario */
@@ -195,7 +220,7 @@ form{
     width:700px;
     
     line-height:30px;
-    margin: 100px 0 100px 400px;
+    margin: 100px 0 100px 200px;
     
 }
 
@@ -238,4 +263,36 @@ li a img:hover{
     height: 30px;
 }
 
+ /* queries */
+
+ @media screen and (max-width:700px){
+    .banner{
+        /* max-width: 500px; */
+        min-width: 200px;
+    }
+   body{
+    margin-left: 50px;
+   }
+    
+    .description{
+        min-width: 200px;
+        max-width: 300px;
+    }
+    }
+@media screen and (max-width:600px) {
+    .banner{
+        width: 350px;
+    }
+    footer h2{
+        margin-left: 200px;
+    }
+}
+   @media screen and (max-width:400px){
+    footer{
+        width: 700px;
+    }
+         footer h2{
+            margin-left:300px;
+         }
+   } 
  
