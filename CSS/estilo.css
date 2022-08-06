@@ -31,6 +31,7 @@ img{
     height: 100px;
     display: flex;
   flex-wrap: nowrap;
+  align-items: center;
     /* background-color: aqua; */
 }
 #logo{
@@ -201,8 +202,8 @@ footer li{
     float: left;
 }
 footer h2{
-    margin: 100px 0 50px 0px;
-    text-align: center;
+    margin: 100px 0 50px 400px;
+    text-align: left;
     
 }
 .redes-sociales{
@@ -266,9 +267,9 @@ li a img:hover{
  /* queries */
 
  @media screen and (max-width:700px){
-    .banner{
+    .banner > img{
         /* max-width: 500px; */
-        min-width: 200px;
+        width:400px;
     }
    body{
     margin-left: 50px;
