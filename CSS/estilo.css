@@ -291,7 +291,7 @@ li a img:hover{
         max-width: 300px;
     }
     }
-@media screen  (max-width:950px) {
+@media screen and (max-width:950px) {
     .banner{
         width: 400px;
          
