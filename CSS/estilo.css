@@ -9,7 +9,7 @@ html, body {
 }
 body{
      /* width: auto; */
-    background-image: url("/MEDIA/IMAGENES/background/background2.jpg");
+    background-image: url("MEDIA/IMAGENES/background/background2.jpg");
     background-position:center;
     background-repeat:unset;
     margin-left: 50px;
