@@ -1,6 +1,11 @@
+/* parametros generales */
 *{
     margin: 0;
     padding: 0;
+}
+html, body {
+    max-width: 100% !important;
+    overflow-x: hidden !important;
 }
 body{
      /* width: auto; */
@@ -17,16 +22,17 @@ body{
     .container-fluid{
         display: flex;
         grid-template-columns: auto;
-        margin-left:5%;
+        margin-left:1%;
     }
 
 .container-fluid > a > img{
-    width: 350px;
+    width: 300px;
 }
 
-.imagen > img{
+img.imagen-sobreMi {
 
-    width: 350px;
+    width: 280px;
+    height: 250px;
 
 }
 /* seccion banner */
@@ -34,35 +40,68 @@ body{
     width: 20rem;
 }
 .grid_main > img {
-    display: inline-flex;
-    grid-template-columns: auto;
+    display: grid;
+    grid-template-columns: 50% 80%;
     width:0;
     height: 30%;
     padding: 0px;
     margin-left: 0px;
+    
 }
 
+main {
+    height: 900px
+} 
+
  
-.description__imagen > p    {
-    width: 0;
+.description-imagen     {
+    width: 300px;
     height: 0;
     padding: 0px;
     text-align: justify;
     margin: 0;
-     
     font-size: 10px;
-    /* overflow: hidden; */
+}
+
+.row>*{
+    margin-left: 10%;
+    margin-bottom: 2%;
+}
+.card-img{
+    height: 180px;
+    margin-top: 10px;
+}
+.col-0 > p{
+    margin-right: 19%;
+}
+button.carousel-control-next, button.carousel-control-prev{
+    top: 15%;   
+    height: 5%;
+}
+
+.description-imagen > p{
+    height: 400px;
+}
+ 
+.mb-4{
+    margin-top: 4rem;
 }
 
 }
 
 /* fin smartphone */
-@media screen and (min-width:401px) and (max-width:767px) {
+
+@media screen and (min-width:401px) and (max-width:770px) {
     
-    .imagen > img{
-    
-        width: auto;
+    .container-fluid > a > img{
+        width: 400px; 
     }
+
+    img > .imagen-sobreMi{
+        width: 25%;
+    }
+
+    
     
     .description__imagen > p    {
         width: 30%;
@@ -74,11 +113,25 @@ body{
         font-size: 18px;
         overflow: hidden;
     }
-   
+
+    .grid_main > img {
+        display: grid;
+        grid-template-columns: 50% 80%;
+        width:0;
+        height: 30%;
+        padding: 0px;
+        margin-left: 0px;
+        
+    }
+    .mb-4{
+        margin-top: 4rem;
+    }
     }
 /* tablets */
 
-@media screen and (min-width: 768px)  and (max-width:1024px){
+@media screen and (min-width: 811px)  and (max-width:1024px){
+
+    
 
     .container-fluid > a > img{
         width: 25rem;
@@ -101,26 +154,7 @@ img{
     width: 50%;
     height: 50%;
 }
-/* .grid_menu{
-    display: grid;
-    grid-template-columns: 50% 50%;
-    justify-content:space-around;
-    width: 100%;
-    margin: 0 auto;
-} */
-
-
-/* .grid_main{
-    display: grid;
-    grid-template-columns: 50% 30%;
-    justify-content:space-around;
-    width: 80%;
-    margin: 0 auto;
-} */
-
-
-
-
+ 
 .encabezado{
     width: auto;
     height: 100px;
@@ -131,17 +165,9 @@ img{
      margin-top: 10px; 
    }
 #menu{
-    /* width: 70%; */
-    /* height: 100px; */
-    
-    /* background-color: blue;  */
-    /* float: left; */
      list-style-type: none;
      margin-top: 40px;
-    
-
-     
-     
+      
 }
 #menu a{
     width:120px;
@@ -151,9 +177,6 @@ img{
     text-align:center;
     transition: height 2s;
     padding-top: 10px;
-    
-    /* color:rgb(9, 70, 101); */
-
     padding:5px 0px 0px 0px;
     border-right:none;
     display:block;
@@ -167,35 +190,38 @@ img{
 }
 #menu ul{
     margin-left: 100px;
+    margin-top: 100px;
     height: fit-content;
 }
 
 main{
     width: 100%;
-    height: 600px;
+    height: 800px;
     display: flex;
-    margin:10% 0px 100px 100px;
- 
+     
 }
 p{
     width: auto;
     height: auto;
     padding: 10px;
     text-align: justify;
-    /* margin: 50px; */
-    /* margin:0; */
     font-size: 18px;
     overflow: hidden;
     
     
 }
 
-
-
-div .imagen{
-    margin-top: 50px;
-    padding: 0;
+.imagen-sobreMi{
+    width: 400px;
+    height: 300px;
+    margin: 20px;
 }
+
+.description-imagen{
+    margin: 5px;
+}
+
+
 
 .description__imagen    {
     width: 30%;
@@ -217,6 +243,12 @@ div .imagen{
     border-radius: 30%;
     margin-left: 200px;
   
+}
+
+.carousel-control-next, .carousel-control-prev{
+    width: 2%;
+     height: 30%;
+     margin: 10%; 
 }
 
 
@@ -260,7 +292,10 @@ nav ul li a{
     transition: background-color 3s;
 }
 
-    
+main > .container{
+    margin-top: 10%;
+}
+
 
 /* banner */
 .banner{
@@ -275,7 +310,7 @@ nav ul li a{
 }
 @keyframes banner{
 	0%, 20%{
-		background-image: url(/MEDIA/IMAGENES/banner1.jpg);
+		background-image: url("/MEDIA/IMAGENES/banner1.jpg");
 	}
 	 25%, 45%{
 		background-image: url("/MEDIA/IMAGENES/banner.2.png");
@@ -325,19 +360,23 @@ nav ul li a{
 .info > h1{
     opacity: 0.1;
 }
-
+.card-img{
+    grid-column: 1/10;
+    position: relative;
+}
 
 /* footer */
 footer{
     width: 100%;
-   list-style-type: none;
+    list-style-type: none;
     align-items: center;
- 
-    margin: auto;
+    margin-top: 200px;
+    /* margin: auto; */
     text-align: center;
     align-content: center;
-    margin-top: 50px;
-    
+   
+    position: relative;
+    bottom: 0;
 
 }
 footer  a{
@@ -377,10 +416,10 @@ footer li{
 }
 /* formulario */
 form{
-    width:700px;
+    width:40%;
     
     line-height:30px;
-    margin: 100px 0 100px 200px;
+    margin: 10% 0 10% 30%;
     
 }
 
@@ -396,9 +435,6 @@ label{
     font-weight: bold;
     color: rgb(8, 137, 223);
 }
-
-
-
 
 /* pseudoclases */
 
@@ -416,129 +452,8 @@ li a img:hover{
     background-color: white;
 }
 
-/* transiciones */
-
 
 #menu a:hover{
     height: 30px;
 }
 
- /* queries */
-
- @media screen and (max-width:700px){
-    .banner{
-        /* max-width: 500px; */
-        min-width: 200px;
-    }
-   body{
-    margin-left: 50px;
-   }
-    
-    .description{
-        min-width: 200px;
-        max-width: 300px;
-    }
-    }
-@media screen  (max-width:950px) {
-    .banner{
-        width: 400px;
-         
-    }
-    footer h2{
-        margin-left: 200px;
-    }
-
-}
-   /* @media screen and (max-width:400px){
-    footer{
-        width: 700px;
-    }
-         footer h2{
-            margin-left:300px;
-         }
-         .banner{
-            width: 200px;
-         }
-   }  */
- @media screen and (max-width:1400px){
-    .imagen   > img{
-        width: 500px;
-        height: 400px;
-        margin-left: 20px;
- 
- }
- .imagen__sobreMi{
-    width: 350px;
-    height: 250px;
-    margin-left: -30px;
-    margin-top: 150px;
- }
-
- #logo > a > img{
-    width: 350px;
- }
- 
-
- }
- @media screen and (max-width:690px){
-    .grid_main{
-        display: grid;
-        /* grid-template-columns: repeat(3, 1fr); */
-         grid-template-columns: 100% ;
-        justify-content: flex-start;
-        grid-template-rows: auto auto; 
-       
- }
- main{
-    margin-top: 100px;
-    margin-left: 0px;
- }
- p.description{
-    width: auto;
-    height: 200px;
-    padding: 10px;
-    text-align: justify;
-    margin: auto;
- }
- .description__imagen{
-    height: 100px;
-    padding: 10px;
-    text-align: justify;
-    margin: 10px 0px 0px 10px;
-   
- }
-
- .imagen > img{
-    margin-top: 0px;
- }
-
-#logo > a > img{
-    width:400px;
-}
-.banner > img{
-    width:400px;
-    margin-left: 0px;
-}
-
-.grid_menu{
-
-    grid-template-columns: 100%;
-}
-
-#menu a{
-    width:45px;
-    height: 10px;
-    font-size:10px;
-    text-decoration:none;
-    text-align:center;
-    transition: height 2s;
-    padding-top: 10px;
-    text-shadow: rgba(100, 100, 100, 0.5);
-   
-}
-
-footer li {
-    width: 30%;
-    float: left;
-}
-}
