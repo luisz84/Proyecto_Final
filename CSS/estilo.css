@@ -8,8 +8,8 @@ html, body {
     overflow-x: hidden !important;
 }
 body{
-     /* width: auto; */
-    background-image: url("/MEDIA/IMAGENES/background/background2.jpg");
+     width: auto;
+    background-image: url("../MEDIA/IMAGENES/background/background2.jpg");
     background-position:center;
     background-repeat:unset;
     margin-left: 50px;
@@ -310,16 +310,16 @@ main > .container{
 }
 @keyframes banner{
 	0%, 20%{
-		background-image: url("/MEDIA/IMAGENES/banner1.jpg");
+		background-image: url("../MEDIA/IMAGENES/banner1.jpg");
 	}
 	 25%, 45%{
-		background-image: url("/MEDIA/IMAGENES/banner2.png");
+		background-image: url("../MEDIA/IMAGENES/banner2.png");
 	}
 	50%, 70%{
-		background-image: url("/MEDIA/IMAGENES/banner3.jpg");
+		background-image: url("../MEDIA/IMAGENES/banner3.jpg");
 	}
 	  75%, 100%{
-		background-image: url("/MEDIA/IMAGENES/banner4.gif");  
+		background-image: url("../MEDIA/IMAGENES/banner4.gif");  
 	}  
 }
 .capa{
