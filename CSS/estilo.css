@@ -26,6 +26,8 @@ body {
   img.imagen-sobreMi {
     width: 280px;
     height: 250px; }
+  .container > h1, .container > .card-title {
+    font-size: 2rem; }
   /* seccion banner */
   .grid_main {
     width: 20rem; }
@@ -35,8 +37,10 @@ body {
       width: 0;
       height: 30%;
       padding: 0px;
-      margin-left: 0px; }
+      margin-left: 0px;
+      margin-top: 200px; }
   main {
+    width: 100%;
     height: 900px; }
   .description-imagen {
     width: 300px;
@@ -102,16 +106,22 @@ img {
   width: 50%;
   height: 50%; }
 
+h1, .card-title {
+  text-align: center;
+  font-weight: bolder;
+  color: aqua; }
+
+.card-title {
+  font-family: 'Courier New', Courier, monospace; }
+
 .encabezado {
   width: auto;
   display: flex;
   flex-wrap: nowrap; }
- 
-a> img{
-  width: 70%;
-  border-radius: 40%;
-  
-}
+
+#logo {
+  margin-top: 10px; }
+
 #menu {
   list-style-type: none;
   margin-top: 40px; }
@@ -185,6 +195,13 @@ p {
   height: 30%;
   margin: 10%; }
 
+.titulo-proyectos {
+  text-align: center;
+  color: blue;
+  font-size: 50px;
+  padding: 2%;
+  font-family: 'Courier New', Courier, monospace; }
+
 .grid_main {
   display: grid;
   background: #020024;
@@ -257,7 +274,7 @@ main > .container {
   max-width: 550px;
   text-align: center; }
 
-.info h1 {
+.info h1, .info .card-title {
   color: #fff;
   font-size: 45px;
   margin-bottom: 20px;
@@ -277,7 +294,7 @@ main > .container {
   border-radius: 50px;
   margin-top: 75px; }
 
-.info > h1 {
+.info > h1, .info > .card-title {
   opacity: 0.1; }
 
 .card-img {
@@ -342,9 +359,8 @@ label {
 nav ul li a:hover {
   /* background-color: orange; */
   color: white;
-  font-size: 20px;
-  height: 50px;
- }
+  font-size: 25px;
+  height: 1rem; }
 
 li a img:hover {
   background-color: white; }
